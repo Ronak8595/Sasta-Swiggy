@@ -60,7 +60,7 @@ export default function Body() {
           />
 
           <button
-            className="px-3 -ml-1 py-3  rounded-full rounded-l-none my-4 text-white bg-orange-950 border border-l-gray-200"
+            className="px-3 -ml-1 py-3  rounded-full rounded-l-none my-4 text-white bg-[#285181] border border-l-gray-200"
             onClick={() => {
               const data = filterData(searchInput, restaurants);
               setFilteredRestaurants(data);
@@ -135,7 +135,7 @@ export default function Body() {
         </div>
         <div
           id="res-list"
-          className="flex flex-wrap justify-between mx-2 sm:mx-36 md:mx-10 lg:mx-2 xl:mx-20 pb-3"
+          className="flex flex-wrap justify-around mx-2 sm:mx-36 md:mx-10 lg:mx-2 xl:mx-20 pb-3"
           data-testid="shimmer"
         >
           {filteredRestaurants?.map((restaurant) => {

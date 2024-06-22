@@ -50,7 +50,7 @@ const Header = () => {
       </div>
       <Link to="/login" className="hidden sm:block sm:w-[12%]">
         <div className="flex justify-end sm:pr-8">
-          <button className=" bg-orange-950 my-6 py-2 w-[6rem] rounded-md hover:bg-white hover:text-black">
+          <button className=" bg-[#285181] my-6 py-2 w-[6rem] rounded-md hover:bg-white hover:text-black">
             Login
           </button>
         </div>

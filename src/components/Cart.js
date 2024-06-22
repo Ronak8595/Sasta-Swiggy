@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Cart = () => {
-  const delivery = 15;
+  const [delivery, setDelivery] = useState(0);
   const [input, setInput] = useState("");
   const [subtotal, setSubTotal] = useState(0);
   const [total, setTotal] = useState(0);
@@ -21,9 +21,12 @@ export const Cart = () => {
     setSubTotal(calculateSubTotal());
   }, [cartItems]);
   useEffect(() => {
+    subtotal === 0 ? setDelivery(0) : setDelivery(15);
+  }, [subtotal]);
+  useEffect(() => {
     setTotal(calculateTotal());
     console.log(cartItems);
-  }, [subtotal]);
+  }, [subtotal, delivery]);
 
   const calculateSubTotal = () => {
     let sub = 0;
@@ -44,7 +47,7 @@ export const Cart = () => {
 
   return (
     <div className="bg-white  min-h-[690] ">
-      <div className="hidden xl:flex flex-col items-center bg-red-950 text-white min-h-[370] text-center py-28 px-60">
+      <div className="hidden xl:flex flex-col items-center bg-[#285181] text-white min-h-[370] text-center py-28 px-60">
         <div className="text-5xl">Shopping Cart </div>
         <p className="mt-4">
           Here, you'll find all the delicious goodies you've handpicked for your
@@ -112,21 +115,21 @@ export const Cart = () => {
           </div>
           <div className="flex justify-end">
             <button
-              className="bg-red-950 py-2 px-3 mt-5 text-white rounded-2xl hover:bg-orange-500"
+              className="bg-[#285181] py-2 px-3 mt-5 text-white rounded-2xl hover:bg-orange-500"
               onClick={() => handleClearCart()}
             >
               Clear Cart
             </button>
           </div>
           <div className="flex flex-col">
-            <button className="py-3 px-1 w-[350] xl:ml-2 mt-10  bg-red-950 text-white rounded-3xl font-bold hover:bg-orange-500">
+            <button className="py-3 px-1 w-[350] xl:ml-2 mt-10  bg-[#285181] text-white rounded-3xl font-bold hover:bg-orange-500">
               Proceed to Checkout
             </button>
             <button className="rounded-3xl border  border-gray-400 w-[350] xl:ml-2 mt-2 py-2 px-1 font-bold hover:bg-red-950 hover:text-white">
               <Link to="/">Continue Ordering</Link>
             </button>
           </div>
-          <div className="mt-14 font-mono font-semibold text-base text-red-950">
+          <div className="mt-14 font-mono font-semibold text-base text-[#285181]">
             Need Help? Contact sastaswiggy@gmail.com
           </div>
         </div>

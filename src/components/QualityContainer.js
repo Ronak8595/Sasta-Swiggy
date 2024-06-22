@@ -6,18 +6,21 @@ export const QualityContainer = ({ onClicker }) => {
       <div className="max-w-xl">
         <h1 className=" text-4xl mt-10   m-2 font-bold sm:mt-10  lg:mt-0 sm:text-5xl ">
           {" "}
-          Khane ko kuch Chahiye?{" "}
+          Hungry for something unique?{" "}
         </h1>
-        <h2 className=" text-4xl mx-2 sm:my-5 font-bold"> Phocha dege! </h2>
-        <p className=" mt-8 text-xl sm:mx-2 sm:mt-3">
-          Indulge in an extraordinary food ordering experience like never
-          before. Join us on this gastronomic adventure, where exceptional
-          flavors, sustainability, and community come together in perfect
-          harmony. Let's celebrate the love of food and culinary exploration,
-          one delicious order at a time.
+        <h2 className=" text-4xl mx-2 sm:my-5 font-bold text-[#285181]">
+          {" "}
+          Sasta Swiggy delivers!{" "}
+        </h2>
+        <p className=" mt-8 text-xl sm:mx-2 sm:mt-3 font-semibold">
+          Discover a revolutionary food ordering experience with Sasta Swiggy!
+          Embark on a unique culinary journey where exceptional flavors,
+          sustainable practices, and community spirit unite. Celebrate your love
+          for food and explore new tastes, one affordable and delicious order at
+          a time.
         </p>
         <button
-          className="mt-8 mx-2  p-3 rounded-xl text-white bg-orange-500 hover:bg-orange-600 sm:mt-5"
+          className="mt-8 mx-2  p-3 rounded-xl text-white bg-[#285181] hover:bg-orange-600 sm:mt-5"
           onClick={onClicker}
         >
           Get Started
